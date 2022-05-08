@@ -1,5 +1,5 @@
 # DAppTruist
-![CeloLogo](https://github.com/celo-org/celo-monorepo)
+![CeloLogo](https://camo.githubusercontent.com/afaa2263aa0e4cac9d104ab777c516250e65ad54a104e473901db998c4c7752a/68747470733a2f2f692e696d6775722e636f6d2f6679724a6930522e706e67)
 
 ## Introduction
 DAOs or Decentralised Autonomous Organisations is basically an organization represented as rules encoded as a computer program that is transparent, controlled by the organization members, and not influenced by a central government. It decides which decision will be made by a decentralized organization. In non-technical terms: DAOs are an effective and safe way to work with like-minded folks around the globe.
