@@ -28,6 +28,9 @@ All the security measures have been kept in mind and we are utilising indusrty s
 ***All Proposals***
 ![demo1](https://github.com/rohit0110/hackdefine/blob/master/Demo%20ss/AllProp.jpeg)
 
+***Proposal Details***
+![demo2](https://github.com/rohit0110/hackdefine/blob/master/Demo%20ss/PropDetail.jpeg)
+
 ***Profile Page***
 ![demo2](https://github.com/rohit0110/hackdefine/blob/master/Demo%20ss/ProfilePage.jpeg)
 
