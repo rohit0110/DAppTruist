@@ -34,47 +34,30 @@ All the security measures have been kept in mind and we are utilising indusrty s
 ***Profile Page***
 ![demo2](https://github.com/rohit0110/hackdefine/blob/master/Demo%20ss/ProfilePage.jpeg)
 
-## Installation
+## Installation/Run App
 
-### Install Git
-* Follow instructions from [Git Website](https://git-scm.com/downloads)
-
-### Install NodeJs and NPM
-* Follow instructions from [NodeJs Website](https://nodejs.org/en/download/)
+### Install Android Studio
+### Install Flutter
 
 ### Cloning Repository and Installation
 * Open Command Prompt in the Directory You Want to Install.
 * Clone the Repository
 ```bash
-git clone https://github.com/chaharnishant11/CrowdCoin.git
+git clone https://github.com/rohit0110/hackdefine
 ```
 * Change working Directory to the Repository
 ```bash
-cd CrowdCoin
+cd hackdefine
 ```
-* Install Dependencies
+* Run Flutter
 ```bash
-npm install
+flutter run
 ```
-* Change Working Directory to CommunityCrowdChain and Install Dependencies
-```bash
-cd CommunityCrowdChain
-npm install
-```
-* Change Back to Root Directory
-```bash
-cd ..
-```
-* Initiate the NodeJs server
-```bash
-npm run dev
-```
-* Access the [Application](http://localhost:3000)
 
 ### Technology Stack
 * Flutter - Dart
 * Celo Blockchain - Solidity
-* Ethereum Smart Contract
+* Web3_Connect package (https://github.com/rohit0110/Web3_Connect)
 
 <!-- ## Features
 #### Secure Investment
