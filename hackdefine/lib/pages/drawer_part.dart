@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hackdefine/constants.dart';
+import 'package:hackdefine/pages/all_proposals.dart';
 import 'package:hackdefine/pages/create_proposals.dart';
+import 'package:web3_connect/web3_connect.dart';
+import 'package:web3dart/web3dart.dart';
 
 class SideMenu extends StatelessWidget {
-  const SideMenu({Key? key}) : super(key: key);
+  SideMenu({Key? key, required this.w3c, required this.client})
+      : super(key: key);
+  Web3Client client;
+  Web3Connect w3c;
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +30,21 @@ class SideMenu extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const CreateProposal()));
+                      builder: (context) =>
+                          CreateProposal(w3c: w3c, client: client)));
             },
           ),
           DrawerListTile(
-            title: "View Proposals",
-            press: () {},
+            title: "All Proposals",
+            press: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => AllProposal(
+                            w3c: w3c,
+                            client: client,
+                          )));
+            },
           ),
           DrawerListTile(
             title: "Profile",

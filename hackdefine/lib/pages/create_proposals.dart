@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hackdefine/constants.dart';
+import 'package:web3_connect/web3_connect.dart';
+import 'package:web3dart/web3dart.dart';
 
 class CreateProposal extends StatefulWidget {
-  const CreateProposal({Key? key}) : super(key: key);
+  CreateProposal({Key? key, required this.w3c, required this.client})
+      : super(key: key);
 
+  Web3Connect w3c;
+  Web3Client client;
   @override
   State<CreateProposal> createState() => _CreateProposalState();
 }
 
-//add controllers
 class _CreateProposalState extends State<CreateProposal> {
   String toCharity = "";
   String description = "";
@@ -18,12 +23,56 @@ class _CreateProposalState extends State<CreateProposal> {
   TextEditingController descController = TextEditingController();
   TextEditingController addController = TextEditingController();
 
-  void addProposal() {
+  Future<DeployedContract> getContract() async {
+    String abiFile = await rootBundle.loadString("assets/abi.json");
+    String contractAddress = "0xC65aF5476d77300A8F06faD3Dd21e5bdf508E8E8";
+    final contract = DeployedContract(
+        ContractAbi.fromJson(abiFile, "CharloDao"),
+        EthereumAddress.fromHex(contractAddress));
+    return contract;
+  }
+
+  Future<void> createTheProposal() async {
+    final contract = await getContract();
+    final function = contract.function("createProposal");
+    final transaction = Transaction.callContract(
+        contract: contract,
+        function: function,
+        from: EthereumAddress.fromHex(widget.w3c.account),
+        maxGas: 100000,
+        gasPrice: EtherAmount.inWei(BigInt.from(100)),
+        parameters: [
+          description,
+          EthereumAddress.fromHex(toCharity),
+          BigInt.from(celoAmount),
+        ]);
+    await widget.client
+        .sendTransaction(widget.w3c.credentials, transaction, chainId: 44787);
+  }
+
+  snackBar({String? label}) {
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(label!),
+          const CircularProgressIndicator(
+            color: Colors.white,
+          )
+        ],
+      ),
+      duration: const Duration(days: 1),
+      backgroundColor: Colors.blue,
+    ));
+  }
+
+  void addProposal() async {
     celoAmount = double.parse(amtController.text);
     description = descController.text;
     toCharity = addController.text;
     //createProposal Function from contract
-
+    await createTheProposal();
+    snackBar(label: "Verifying transaction");
     //exit screen
     Navigator.pop(context);
   }

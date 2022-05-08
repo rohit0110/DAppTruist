@@ -1,3 +1,1 @@
-vault smart contract
-polygon
-add alan AI (optional)
+add button for voting on a proposal
