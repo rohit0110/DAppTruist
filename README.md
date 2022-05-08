@@ -14,20 +14,22 @@ All the security measures have been kept in mind and we are utilising indusrty s
 
 ## Demo Screenshots
 ***Log-in Page***
-![demo2](https://github.com/chaharnishant11/CrowdCoin/blob/master/Screenshots/homePage.png)
+![demo2](https://github.com/rohit0110/hackdefine/blob/master/Demo%20ss/LoginWallet.jpeg)
 
 
 ***Home Page***
-![demo2](https://github.com/chaharnishant11/CrowdCoin/blob/master/Screenshots/homePage.png)
+![demo2](https://github.com/rohit0110/hackdefine/blob/master/Demo%20ss/HomePege.jpeg)
 
-***Profile Page***
-![demo2](https://github.com/chaharnishant11/CrowdCoin/blob/master/Screenshots/homePage.png)
+
 
 ***Create Proposal***
-![demo2](https://github.com/chaharnishant11/CrowdCoin/blob/master/Screenshots/homePage.png)
+![demo2](https://github.com/rohit0110/hackdefine/blob/master/Demo%20ss/CreateProp.jpeg)
 
 ***All Proposals***
-![demo1](https://github.com/chaharnishant11/CrowdCoin/blob/master/Screenshots/CampaignDetails.png)
+![demo1](https://github.com/rohit0110/hackdefine/blob/master/Demo%20ss/AllProp.jpeg)
+
+***Profile Page***
+![demo2](https://github.com/rohit0110/hackdefine/blob/master/Demo%20ss/ProfilePage.jpeg)
 
 ## Installation
 
