@@ -38,6 +38,7 @@ dependencies:
   web3dart: ^2.3.5
   http: ^0.13.4
   url_launcher: ^6.1.0
+  ipfs_client_flutter:  ^1.0.7 
 
 
 dev_dependencies:

@@ -1,15 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:hackdefine/constants.dart';
+import 'package:ipfs_client_flutter/ipfs_client_flutter.dart';
 import 'package:web3_connect/web3_connect.dart';
 
-class ProfilePage extends StatefulWidget {
-  ProfilePage({Key? key, required this.w3c}) : super(key: key);
+class UploadIPFS extends StatefulWidget {
+  UploadIPFS({Key? key, required this.w3c}) : super(key: key);
   Web3Connect w3c;
   @override
-  State<ProfilePage> createState() => _ProfilePageState();
+  State<UploadIPFS> createState() => _UploadIPFSState();
 }
 
-class _ProfilePageState extends State<ProfilePage> {
+class _UploadIPFSState extends State<UploadIPFS> {
+  IpfsClient ipfsClient = IpfsClient(
+      url: "https://ipfs.infura.io:5001",
+      authorizationToken: "ea6ac58f147e7c0f2ac66575428c97e4");
+
+  void writeToIPFS() async {
+    await ipfsClient.write(
+        dir: "myFolder/1catto-modified.png",
+        filePath: "assets/1catto-modified.png");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:hackdefine/constants.dart';
 import 'package:hackdefine/pages/all_proposals.dart';
 import 'package:hackdefine/pages/create_proposals.dart';
+import 'package:hackdefine/pages/profile.dart';
 import 'package:web3_connect/web3_connect.dart';
 import 'package:web3dart/web3dart.dart';
 
@@ -48,7 +49,14 @@ class SideMenu extends StatelessWidget {
           ),
           DrawerListTile(
             title: "Profile",
-            press: () {},
+            press: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ProfilePage(
+                            w3c: w3c,
+                          )));
+            },
           ),
         ],
       ),

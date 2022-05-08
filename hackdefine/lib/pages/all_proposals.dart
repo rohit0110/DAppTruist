@@ -52,7 +52,7 @@ class _AllProposalState extends State<AllProposal> {
   }
 
   void getProposal() async {
-    proposals = await getProposals();
+    //proposals = await getProposals();
     //snackBar(label: "Verifying request");
   }
 
@@ -62,33 +62,32 @@ class _AllProposalState extends State<AllProposal> {
     super.initState();
   }
 
-  List<dynamic> proposals = [
-    AProposal(
-        description:
-            'Dedicate donations from the treasury for the month of April to Bill & Melinda Gates Foundation',
-        amount: 200000,
-        fromAddress: '0x5F7AD94Cd3303FF07F2B1239463ceF94f2c81217',
-        toCharity: '0x5Ef354bEAdf6C7406037302552BCD1945eef7603',
-        forVotes: 78,
-        againstVotes: 54),
-    AProposal(
-        description: 'Pay increase for contributors and maintaners by 7%',
-        amount: 56000,
-        fromAddress: '0xB76fdfF78eDE4fCb9a0645Fbd4ce6EC7A086f33e',
-        toCharity: '0x874069fa1eb16d44d622f2e0ca25eea172369bc1',
-        forVotes: 49,
-        againstVotes: 126),
-    AProposal(
-        description: 'Provide support to the COVID relief fund',
-        amount: 10000000,
-        fromAddress: '0x10c892a6ec43a53e45d0b916b4b7d383b1b78c0f',
-        toCharity: '0x5F7AD94Cd3303FF07F2B1239463ceF94f2c81217',
-        forVotes: 147,
-        againstVotes: 2)
-  ];
-
   @override
   Widget build(BuildContext context) {
+    List<dynamic> proposals = [
+      AProposal(
+          description:
+              'Dedicate donations from the treasury for the month of April to Bill & Melinda Gates Foundation',
+          amount: 200000,
+          fromAddress: '0x5F7AD94Cd3303FF07F2B1239463ceF94f2c81217',
+          toCharity: '0x5Ef354bEAdf6C7406037302552BCD1945eef7603',
+          forVotes: 78,
+          againstVotes: 54),
+      AProposal(
+          description: 'Pay increase for contributors and maintaners by 7%',
+          amount: 56000,
+          fromAddress: '0xB76fdfF78eDE4fCb9a0645Fbd4ce6EC7A086f33e',
+          toCharity: '0x874069fa1eb16d44d622f2e0ca25eea172369bc1',
+          forVotes: 49,
+          againstVotes: 126),
+      AProposal(
+          description: 'Provide support to the COVID relief fund',
+          amount: 10000000,
+          fromAddress: '0x10c892a6ec43a53e45d0b916b4b7d383b1b78c0f',
+          toCharity: '0x5F7AD94Cd3303FF07F2B1239463ceF94f2c81217',
+          forVotes: 147,
+          againstVotes: 2)
+    ];
     return Scaffold(
       appBar: AppBar(
         title: const Text("All Proposals"),
@@ -112,7 +111,7 @@ class _AllProposalState extends State<AllProposal> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Description: ${proposals[index].description}",
+                          "${proposals[index].description}",
                           style: const TextStyle(
                               color: Colors.black,
                               fontSize: 24,
@@ -122,7 +121,7 @@ class _AllProposalState extends State<AllProposal> {
                           height: defaultPadding,
                         ),
                         Text(
-                          "Amount Requested: ${proposals[index].amount}",
+                          "Amount Requested: ${proposals[index].amount} cUSD",
                           style: const TextStyle(
                               color: Colors.black,
                               fontSize: 20,
@@ -135,7 +134,9 @@ class _AllProposalState extends State<AllProposal> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ProposalDetails()));
+                            builder: (context) => ProposalDetails(
+                                  proposal: proposals[index],
+                                )));
                   },
                 );
               }))),
