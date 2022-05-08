@@ -1,0 +1,81 @@
+# DAppTruist
+
+## Introduction
+DAOs or Decentralised Autonomous Organisations is basically an organization represented as rules encoded as a computer program that is transparent, controlled by the organization members, and not influenced by a central government. It decides which decision will be made by a decentralized organization. In non-technical terms: DAOs are an effective and safe way to work with like-minded folks around the globe.
+
+## The Problem
+In centralised organisations there exists an hierarchy that usually is the governing body, consisting of CXO level officers that possess majority of the decision making power and are the majority stakeholders. The need of DAOs arrises due to the disparity in decision making power between the community members and those in the governing body which makes it unfair for the common man to have is oppinions heard regardless of how valuable they might be. Contrary to this, in Decentralised Organisations every member is an equal stakeholder and has the same voting power as every other person, no vote carries more power than the other regardless of the persons financial situation.
+
+
+## What We Propose
+We will be building a Decentralised Autonomous Organisation on the Celo blockchain. Here at DAppTruist there’s no CEO who can authorize spending based on their own whims and no chance of a dodgy CFO manipulating the books. Everything is out in the open and the rules around spending are baked into the DAO via its code.
+All the security measures have been kept in mind and we are utilising indusrty standard audited libraries and dependancies. Our sole aim is to empower the common man and make him/her/them feel like they're being heard and their opinions matter.
+
+## Demo Screenshots
+***Log-in Page***
+![demo2](https://github.com/chaharnishant11/CrowdCoin/blob/master/Screenshots/homePage.png)
+
+
+***Home Page***
+![demo2](https://github.com/chaharnishant11/CrowdCoin/blob/master/Screenshots/homePage.png)
+
+***Profile Page***
+![demo2](https://github.com/chaharnishant11/CrowdCoin/blob/master/Screenshots/homePage.png)
+
+***Create Proposal***
+![demo2](https://github.com/chaharnishant11/CrowdCoin/blob/master/Screenshots/homePage.png)
+
+***All Proposals***
+![demo1](https://github.com/chaharnishant11/CrowdCoin/blob/master/Screenshots/CampaignDetails.png)
+
+## Installation
+
+### Install Git
+* Follow instructions from [Git Website](https://git-scm.com/downloads)
+
+### Install NodeJs and NPM
+* Follow instructions from [NodeJs Website](https://nodejs.org/en/download/)
+
+### Cloning Repository and Installation
+* Open Command Prompt in the Directory You Want to Install.
+* Clone the Repository
+```bash
+git clone https://github.com/chaharnishant11/CrowdCoin.git
+```
+* Change working Directory to the Repository
+```bash
+cd CrowdCoin
+```
+* Install Dependencies
+```bash
+npm install
+```
+* Change Working Directory to CommunityCrowdChain and Install Dependencies
+```bash
+cd CommunityCrowdChain
+npm install
+```
+* Change Back to Root Directory
+```bash
+cd ..
+```
+* Initiate the NodeJs server
+```bash
+npm run dev
+```
+* Access the [Application](http://localhost:3000)
+
+### Technology Stack
+* Flutter - Dart
+* Celo Blockchain - Solidity
+* Ethereum Smart Contract
+
+<!-- ## Features
+#### Secure Investment
+Information is stored across a network of computers instead of on a single server, makes it very difficult for hackers to compromise the transaction data.
+#### Voting Power for Investors
+The creator can only use the money if a minimum number of contributors approve a certain request. It will make sure the money is used for Necessities rather than Luxuries.
+#### Profit Distribution
+The owner of the startup is required to periodically enter details about revenue generation. Any profit that is generated is automatically distributed  among the investors providing investors with additional layer of security of interests of investors.
+#### Machine Learning
+Generating of finance related parameters such as gross profit, liquidity ratio, quick asset ratio etc. to produce a graph of these metrics and using Machine Learning Techniques(XGBoost, Random Forest Classifaction) to model performance of these Startups aiding them to make investment choices. -->
